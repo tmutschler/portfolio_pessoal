@@ -1,0 +1,91 @@
+         body {margin: 0;} 
+        
+        .container {display: grid;}/*define o espaço da página em uma grade alterável*/
+
+        header {
+            grid-column-start: 2;
+            grid-column-end: 12;
+            background-color: #dcdcdd;
+            font:1.4rem;
+            font-family: sans-serif;
+            color: #353535;
+            font-variant: small-caps;
+        }/*criar a formatação do cabeçalho com cor e tamanho específico, também define a fonte usada e espaçamento entre as letras*/
+
+        b {
+            font: 2rem "Fira Sans", sans-serif;
+            color: #353535;
+            font-variant: small-caps;
+        }/*altera parte específica do título no cabeçalho*/
+
+        .menu {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            background-color: white;
+            width: 200px;
+        }/*define que os links do menu não possuem estilo na formatação de lista, limita o quadro do menu com fundo branco quando não ativado pelo mouse*/
+        
+        li a {
+            grid-column-start: 2;
+            grid-column-end: 4;
+            display: block;
+            color: #353535;
+            padding: 8px 16px;
+            text-decoration: none;
+        }/*altera a formatação do menu e da lista de portfólio (links das pág.)*/
+        
+
+        a:hover {
+            background-color: #dcdcdd;
+            color: black
+        }/*altera a formatação dos links do menu ao passar o mouse*/
+
+        a,
+        a:link {
+            text-decoration: none;
+            padding: 8px 16px;
+            border: solid #dcdcdd 1px;
+        }/*altera a formatação dos links do menu*/
+
+        .a, .a:link {text-decoration: underline;}
+        .a:hover {color: #dcdcdc}
+        .a:visited {color: #0000ff;}
+        /*altera a formatação dos links da pág. de portfólio, alterando cor depois de acessados, e fundo ao passar o mouse */
+
+        .principal {
+            grid-column-start: 2;
+            grid-column-end: 12;
+            padding-left: 15px;
+            padding-right: 15px;
+            text-align: justify;
+            font-family: sans-serif;
+            color: #353535;
+        }/*formatação de texto com fonte específica e alinhamento conforme a grade e margens laterais limitadas*/
+
+        .itens {
+                grid-row-start: auto;
+                width: 400px;
+                list-style-type: none;
+        } /*enquadra os itens do conteúdo da pág. portfólio*/
+
+        h2 {border-bottom: 2px solid #dcdcdd;}/*cria uma linha abaixo dos títulos das pág.*/
+
+        h3 {border-bottom: 2px solid #353535;}/*cria uma linha abaixo do título da pág. contato*/
+
+        p::first-letter {font-size: xx-large;}/*alteração na primeira letra dos parágrafos*/
+       
+        .contato{background-color: #dcdcdd;}/*altera o fundo da pág. de contato*/
+        
+        /* formatação media query para dispositivos móveis */
+        @media only screen and (max-width: 767px) {
+            .wrapper {
+                grid-column-start: 1;
+                grid-column-end: 1;
+            }
+
+            .principal {
+                grid-column-start: 1;
+                grid-column-end: 1;
+            }
+        }
